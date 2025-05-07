@@ -16,6 +16,8 @@ If you're using Windows, you can install WSL2 and Ubuntu by following these step
 1. [Install WSL2 on Windows](https://learn.microsoft.com/en-us/windows/wsl/install)
 2. [Install Ubuntu on WSL2](https://ubuntu.com/wsl)
 
+> **⚠️ WARNING**: When using WSL2, do NOT run this script from the Windows filesystem mounted at `/mnt`. Always run the script from your Linux home directory (e.g., `/home/username/`). Running from `/mnt` will significantly slow down the compilation process due to filesystem performance limitations between Windows and WSL.
+
 The script will automatically install the following dependencies:
 - git
 - bc
@@ -90,6 +92,8 @@ When using the `-d` or `--deploy` option, the script:
 4. Updates module dependencies
 
 The remote user must have write permissions to `/boot/firmware` or sudo access.
+
+> **Note**: After deployment, you must manually reboot the Raspberry Pi to start using the newly installed custom kernel.
 
 ## Loading Custom Modules
 

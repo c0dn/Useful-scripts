@@ -67,7 +67,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-sudo apt install git bc bison flex libssl-dev make libc6-dev libncurses5-dev crossbuild-essential-arm64 -y
+sudo apt install git bc bison flex libssl-dev make libc6-dev libncurses5-dev crossbuild-essential-arm64 build-essential -y
 
 if [ ! -d "linux" ]; then
   echo "'linux' directory not found. Cloning repository..."
